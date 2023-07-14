@@ -1,0 +1,20 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+
+    {% if arriendos %}
+        <p>Estamos buscando el: {{nombre_pelicula}}</p>
+        <ul>
+            {% for arriendo in arriendos %}
+                <li>{{arriendo.nombre_pelicula}}</li>
+                <li>{{arriendo.fecha_arriendo}}</li>
+                <li>{{arriendo.cliente_arriendo}}</li>
+            {% endfor %}    
+        </ul>
+    {% endif %}    
+
+{% endblock %}    

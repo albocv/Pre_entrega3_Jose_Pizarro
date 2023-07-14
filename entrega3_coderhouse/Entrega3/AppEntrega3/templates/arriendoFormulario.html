@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Ingreso Arriendo Pelicula</title>
+</head>
+<body>
+
+    {% if miFormulario2.errors %}
+        <p style="color:red;">No se guardan los datos del arriendo, favor revisar</p>
+    {% endif %}
+
+    <form action="" method="POST">{% csrf_token %}
+
+        <table>
+            {{ miFormulario2.as_table}}
+        </table>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
